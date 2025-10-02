@@ -47,6 +47,7 @@ android {
     }
     buildFeatures{
         viewBinding = true
+        buildConfig = true
     }
 }
 
@@ -76,6 +77,10 @@ dependencies {
     //coil
     implementation("io.coil-kt.coil3:coil:3.3.0")
     implementation("io.coil-kt.coil3:coil-network-okhttp:3.3.0")
+
+    //db room
+    implementation("androidx.room:room-ktx:2.8.1")
+    ksp("androidx.room:room-compiler:2.8.1")
 
 
 

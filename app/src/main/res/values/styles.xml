@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="text">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text87</item>
+    </style>
+    <style name="text.H">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="text.H.1">
+        <item name="android:textSize">20sp</item>
+
+    </style>
+    <style name="text.H.2">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="text.H.3">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="text.Body">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="text.Caption">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text60</item>
+    </style>
+</resources>

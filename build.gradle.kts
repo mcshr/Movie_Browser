@@ -5,3 +5,11 @@ plugins {
     id("com.google.dagger.hilt.android") version "2.57.2" apply false
     id("com.google.devtools.ksp") version "2.1.20-2.0.0" apply false
 }
+buildscript {
+    repositories {
+        google()
+    }
+    dependencies {
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.9.4")
+    }
+}

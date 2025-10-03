@@ -21,4 +21,8 @@ interface FavoriteMoviesDao {
 
     @Query("SELECT id FROM favorite_movies")
     suspend fun getAllIdsFavoriteMovies(): List<Int>
+
+    @Query("SELECT EXISTS(SELECT 1 FROM favorite_movies WHERE id = :id)")
+    suspend fun exists(id: Int): Boolean
+
 }

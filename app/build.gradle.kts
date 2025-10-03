@@ -7,6 +7,7 @@ plugins {
 
     id("com.google.devtools.ksp")
     id("com.google.dagger.hilt.android")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 val localProperties = Properties().apply {
@@ -82,6 +83,7 @@ dependencies {
     implementation("androidx.room:room-ktx:2.8.1")
     ksp("androidx.room:room-compiler:2.8.1")
 
-
-
+    //navigation
+    implementation("androidx.navigation:navigation-fragment:2.9.4")
+    implementation("androidx.navigation:navigation-ui:2.9.4")
 }

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_grah"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.mcshr.moviebrowser.presentation.screens.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_movieFavoritesFragment"
+            app:destination="@id/movieFavoritesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.mcshr.moviebrowser.presentation.screens.movie_detail.MovieDetailFragment"
+        android:label="fragment_movie_detail"
+        tools:layout="@layout/fragment_movie_detail" >
+        <argument
+            android:name="movie_id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieFavoritesFragment"
+        android:name="com.mcshr.moviebrowser.presentation.screens.movie_favourites.MovieFavoritesFragment"
+        android:label="fragment_movie_favorites"
+        tools:layout="@layout/fragment_movie_favorites" >
+        <action
+            android:id="@+id/action_movieFavoritesFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+    </fragment>
+</navigation>

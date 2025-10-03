@@ -44,20 +44,16 @@ class HomeViewModel @Inject constructor(
             }
         }
     }
-
+    private var isProcessing = false
     fun toggleFavorite(movie: Movie) {
+        if (isProcessing) return
         viewModelScope.launch {
+            isProcessing = true
+            val newState = toggleFavoritesUseCase(movie)
             _movies.value = _movies.value?.map {
-                if (it.id == movie.id) {
-                    it.copy(
-                        isFavorite = !it.isFavorite
-                    )
-                } else {
-                    it
-                }
+                if (it.id == movie.id) it.copy(isFavorite = newState) else it
             }
-            toggleFavoritesUseCase(movie)
+            isProcessing = false
         }
     }
-
 }

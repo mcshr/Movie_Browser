@@ -11,4 +11,5 @@ interface MoviesRepository {
     suspend fun addToFavorites(movie: Movie)
     suspend fun removeFromFavorites(movie: Movie)
     fun getFavoriteMovies(): LiveData<List<Movie>>
+    suspend fun isInFavorites(id: Int): Boolean
 }

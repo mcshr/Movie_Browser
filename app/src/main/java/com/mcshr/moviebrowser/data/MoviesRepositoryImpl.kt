@@ -38,4 +38,8 @@ class MoviesRepositoryImpl @Inject constructor(
        }
     }
 
+    override suspend fun isInFavorites(id:Int): Boolean {
+        return dao.exists(id)
+    }
+
 }
